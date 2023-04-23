@@ -15,7 +15,7 @@ https://github.com/foostan/crkbd/blob/master/corne-cherry/doc/v2/buildguide_en.m
 | Bottom plate | 2 sheets | |
 | OLED cover | 2 sheets | |
 | ProMicro | 2 | Alternative: [Elite-C](https://deskthority.net/wiki/Elite-C) |
-| Reset switch | 2 | |
+| Reset switch | 2 | [ALPS SKSN 6.2x3.5mm](https://tech.alpsalpine.com/e/products/category/tact-switch/sub/02/series/sksn/) |
 | Diodes | 42 | SMD Only (SOD-123 Package) |
 | PCB sockets | 42 | Compatible with Kailh and Gateron |
 | Key switches | 42 | Only compatible with MX style |
