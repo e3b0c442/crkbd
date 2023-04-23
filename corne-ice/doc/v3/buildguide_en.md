@@ -25,6 +25,8 @@ https://github.com/foostan/crkbd/blob/master/corne-cherry/doc/v2/buildguide_en.m
 | Screw M2 4mm | 28 screws | |
 | Rubber feet | 8 pieces | |
 | Micro USB cable | 1 | Avoid charge-only cables |
+| JST battery sockets | 2 |  |
+| Power switches | 2 | [MSK12C02](https://cdn.shopify.com/s/files/1/0227/9171/6941/files/MSK12C02.pdf?v=1642424632)
 
 ### Optional
 
@@ -34,6 +36,7 @@ https://github.com/foostan/crkbd/blob/master/corne-cherry/doc/v2/buildguide_en.m
 | [Microcontroller/OLED Sockets](https://www.digikey.com/en/products/detail/315-43-112-41-003000/ED4764-12-ND/4455232) | 1 | Alternative: [2.54 1row femal sliv](https://www.aliexpress.com/item/4001122376295.html) option |
 | [Microcontroller Pins](https://www.digikey.com/en/products/detail/mill-max-manufacturing-corp/3320-0-00-15-00-00-03-0/4147392) | 48 | Alternative: Diode/Resistor legs |
 | [OLED Headers](https://www.digikey.com/en/products/detail/mill-max-manufacturing-corp/350-10-164-00-006000/357045) | 1 | Soldered to OLED module |
+| 301230  or 301228 battery | 2 | see [nice!nano documentation](https://nicekeyboards.com/docs/nice-nano/getting-started) for more details |
 
 ## Firmware preparation
 
@@ -117,7 +120,9 @@ The diode is completed by soldering 42 pieces in total on the left and right.
 
 ![build_diode_overview](assets/build_diode_overview.jpg)
 
+###  Reset switch, pin socket for OLED
 
+Solder reset switch (tact switch),
 and OLED pin socket as shown in the picture below.
 
 ![build_trrs_reset_oled](assets/build_trrs_reset_oled.jpg)
@@ -138,6 +143,10 @@ for details on how to use spring-loaded pin headers.
 
 ![build_promicro_conthrough](assets/build_promicro_conthrough.jpg)
 
+### JST Sockets and power switches
+
+Solder the JST Sockets and power switches in whichever order makes it easier for you.
+
 ### OLED module
 
 Insert the pin header into the socket first, then solder the OLED module
@@ -152,10 +161,11 @@ then solder remaining pins.
 Now is a good time to test your keyboard to help isolate potential problems.
 
 To check the operation, connect the batteries to the controllers.
+
 If it is done correctly so far, shorting a hotswap socket pad with tweezers will 
 output out a keypress and it will be displayed on the OLED module.
 
-### Switch Sockets
+### Keyboard Switch Sockets
 
 Solder hotswap sockets according to mark on PCB as shown below.
 Refer to **TIPS: Tips for installing SMD parts** section above as similar soldering
