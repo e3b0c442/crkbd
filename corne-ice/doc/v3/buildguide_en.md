@@ -1,6 +1,6 @@
 # Build Guide
 
-This is the build guide for Corne Cherry v3.
+This is the build guide for Corne Cherry v3 ICE variant.
 [Click here for the Corne Cherry v2 build guide](
 https://github.com/foostan/crkbd/blob/master/corne-cherry/doc/v2/buildguide_en.md).
 
@@ -14,9 +14,8 @@ https://github.com/foostan/crkbd/blob/master/corne-cherry/doc/v2/buildguide_en.m
 | Top plate | 2 sheets | 1.5mm-3mm thick |
 | Bottom plate | 2 sheets | |
 | OLED cover | 2 sheets | |
-| ProMicro | 2 | Alternative: [Elite-C](https://deskthority.net/wiki/Elite-C) |
-| TRRS jack | 2 | |
-| Reset switch | 2 | |
+| nice!nano v2 | 2 | |
+| Reset switch | 2 | [ALPS SKSN 6.2x3.5mm](https://tech.alpsalpine.com/e/products/category/tact-switch/sub/02/series/sksn/) |
 | Diodes | 42 | SMD Only (SOD-123 Package) |
 | PCB sockets | 42 | Compatible with Kailh and Gateron |
 | Key switches | 42 | Only compatible with MX style |
@@ -25,27 +24,27 @@ https://github.com/foostan/crkbd/blob/master/corne-cherry/doc/v2/buildguide_en.m
 | Spacer M2 9mm | 4 pieces | For OLED cover |
 | Screw M2 4mm | 28 screws | |
 | Rubber feet | 8 pieces | |
-| TRRS (4 poles) cable | 1 | TRS (3 poles) cable is also compatible |
 | Micro USB cable | 1 | Avoid charge-only cables |
+| JST battery sockets | 2 |  |
+| Power switches | 2 | [MSK12C02](https://cdn.shopify.com/s/files/1/0227/9171/6941/files/MSK12C02.pdf?v=1642424632)
 
 ### Optional
 
 | Name | Count | Remarks |
 |:-|:-|:-|
 | OLED module | 2 | |
-| SK6812MINI-E | 42 | LEDs for Backlight |
-| WS2812B | 12 | LEDs for Undergrow |
 | [Microcontroller/OLED Sockets](https://www.digikey.com/en/products/detail/315-43-112-41-003000/ED4764-12-ND/4455232) | 1 | Alternative: [2.54 1row femal sliv](https://www.aliexpress.com/item/4001122376295.html) option |
 | [Microcontroller Pins](https://www.digikey.com/en/products/detail/mill-max-manufacturing-corp/3320-0-00-15-00-00-03-0/4147392) | 48 | Alternative: Diode/Resistor legs |
 | [OLED Headers](https://www.digikey.com/en/products/detail/mill-max-manufacturing-corp/350-10-164-00-006000/357045) | 1 | Soldered to OLED module |
+| 301230  or 301228 battery | 2 | see [nice!nano documentation](https://nicekeyboards.com/docs/nice-nano/getting-started) for more details |
 
 ## Firmware preparation
 
 If you build the firmware yourself, it will take some time to set up the environment,
 so it's best to start at the beginning.\
-It is recommended to flash ProMicro's prior to soldering.\
+It is recommended to flash nice!nano's prior to soldering.\
 For more information,
-please see <https://github.com/foostan/crkbd/blob/master/doc/firmware_en.md>.
+please see <https://nicekeyboards.com/docs/nice-nano/getting-started#flashing-firmware-and-bootloaders>.
 
 ## Verification
 
@@ -121,61 +120,18 @@ The diode is completed by soldering 42 pieces in total on the left and right.
 
 ![build_diode_overview](assets/build_diode_overview.jpg)
 
-### LED (optional)
+###  Reset switch, pin socket for OLED
 
-Solder the SK6812MINI-E and WS2812B.
-
-![build_led_front_overview](assets/build_led_front_overview.jpg)
-
-All soldering is done from the back side, but the SK6812MINI-E is for Backlight
-(the front side is shining) and the WS2812B is for Undergrow (the back side is shining).
-
-![build_led_back_overview](assets/build_led_back_overview.jpg)
-
-#### WS2812B (Undergrow)
-
-First, solder the WS2812B.
-
-Match recessed corner of the LED with marked corner on the PCB as shown below.
-Refer to **TIPS: Tips for installing SMD parts** section above as similar soldering
-procedure is followed. 
-
-![build_led_undergrow](assets/build_led_undergrow.jpg)
-
-WS2812B LED soldering is completed after 12 are installed on left and right.
-
-![build_led_undergrow_overview](assets/build_led_undergrow_overview.jpg)
-
-#### SK6812MINI-E (Backlight)
-
-Then solder the SK6812MINI-E.
-
-Match the notched corner of the LED with the marked corner on the PCB as show below.
-Refer to **TIPS: Tips for installing SMD parts** section above as similar soldering
-procedure is followed. 
-These are more resilient than the SK6812MINI LEDs,
-but still may be damaged if directly exposed to the heat of a soldering iron.
-~320°C seems to be an ok temperature, evne if all four legs are soldered 
-one after another.
-
-![build_led_backlight](assets/build_led_backlight.jpg)
-
-SK6812MINI-E LED soldering is completed after 42 are installed on left and right.
-
-![build_led_back_overview](assets/build_led_back_overview.jpg)
-
-### TRRS jack, reset switch, pin socket for OLED
-
-Solder the TRRS jack, reset switch (tact switch),
+Solder reset switch (tact switch),
 and OLED pin socket as shown in the picture below.
 
 ![build_trrs_reset_oled](assets/build_trrs_reset_oled.jpg)
 
 Since these parts may fall off when soldering, you can affix them with masking tape.
 
-### ProMicro
+### Controller
 
-Solder headers to PCB. Then solder ProMicro to headers, with components facing PCB as shown below.
+Solder headers to PCB. Then solder nice!nano to headers, with components facing PCB as shown below.
 
 ![build_promicro](assets/build_promicro.jpg)
 
@@ -186,6 +142,10 @@ https://github.com/MakotoKurauchi/helix/blob/master/Doc/buildguide_en.md#pro-mic
 for details on how to use spring-loaded pin headers.
 
 ![build_promicro_conthrough](assets/build_promicro_conthrough.jpg)
+
+### JST Sockets and power switches
+
+Solder the JST Sockets and power switches in whichever order makes it easier for you.
 
 ### OLED module
 
@@ -200,12 +160,12 @@ then solder remaining pins.
 
 Now is a good time to test your keyboard to help isolate potential problems.
 
-To check the operation, connect left and right sides with TRRS cable,
-then connect left side to the computer with USB cable.
+To check the operation, connect the batteries to the controllers.
+
 If it is done correctly so far, shorting a hotswap socket pad with tweezers will 
 output out a keypress and it will be displayed on the OLED module.
 
-### Switch Sockets
+### Keyboard Switch Sockets
 
 Solder hotswap sockets according to mark on PCB as shown below.
 Refer to **TIPS: Tips for installing SMD parts** section above as similar soldering
