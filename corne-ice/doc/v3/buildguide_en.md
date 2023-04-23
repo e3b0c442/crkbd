@@ -14,7 +14,7 @@ https://github.com/foostan/crkbd/blob/master/corne-cherry/doc/v2/buildguide_en.m
 | Top plate | 2 sheets | 1.5mm-3mm thick |
 | Bottom plate | 2 sheets | |
 | OLED cover | 2 sheets | |
-| ProMicro | 2 | Alternative: [Elite-C](https://deskthority.net/wiki/Elite-C) |
+| nice!nano v2 | 2 | |
 | Reset switch | 2 | [ALPS SKSN 6.2x3.5mm](https://tech.alpsalpine.com/e/products/category/tact-switch/sub/02/series/sksn/) |
 | Diodes | 42 | SMD Only (SOD-123 Package) |
 | PCB sockets | 42 | Compatible with Kailh and Gateron |
@@ -39,9 +39,9 @@ https://github.com/foostan/crkbd/blob/master/corne-cherry/doc/v2/buildguide_en.m
 
 If you build the firmware yourself, it will take some time to set up the environment,
 so it's best to start at the beginning.\
-It is recommended to flash ProMicro's prior to soldering.\
+It is recommended to flash nice!nano's prior to soldering.\
 For more information,
-please see <https://github.com/foostan/crkbd/blob/master/doc/firmware_en.md>.
+please see <https://nicekeyboards.com/docs/nice-nano/getting-started#flashing-firmware-and-bootloaders>.
 
 ## Verification
 
@@ -124,9 +124,9 @@ and OLED pin socket as shown in the picture below.
 
 Since these parts may fall off when soldering, you can affix them with masking tape.
 
-### ProMicro
+### Controller
 
-Solder headers to PCB. Then solder ProMicro to headers, with components facing PCB as shown below.
+Solder headers to PCB. Then solder nice!nano to headers, with components facing PCB as shown below.
 
 ![build_promicro](assets/build_promicro.jpg)
 
